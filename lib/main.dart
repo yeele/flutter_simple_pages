@@ -16,7 +16,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => MyHomePage(title: 'Flutter Demo Home Page'),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/sample': (context) => SamplePage(),
+      },
     );
   }
 }
@@ -68,10 +74,11 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text("押っす"),
             onPressed: () {
               print("オッス！");
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SamplePage()),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => SamplePage()),
+              // );
+              Navigator.pushNamed(context, '/sample');
             },
           ),
         ),

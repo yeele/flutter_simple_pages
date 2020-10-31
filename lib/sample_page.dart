@@ -11,6 +11,7 @@ class SamplePage extends StatelessWidget {
         body: Container(
             height: double.infinity,
             color: Colors.cyanAccent,
+            width: double.infinity,
             child: Column(
               children: [
                 Text("戻る"),
