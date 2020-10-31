@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_very_simple/sample_page.dart';
 import 'dart:async';
 import 'package:intl/intl.dart';
 
@@ -67,6 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text("押っす"),
             onPressed: () {
               print("オッス！");
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SamplePage()),
+              );
             },
           ),
         ),
