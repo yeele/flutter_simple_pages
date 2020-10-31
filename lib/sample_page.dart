@@ -9,8 +9,18 @@ class SamplePage extends StatelessWidget {
           title: Text("Sample Pageでーす"),
         ),
         body: Container(
-          height: double.infinity,
-          color: Colors.cyanAccent,
-        ));
+            height: double.infinity,
+            color: Colors.cyanAccent,
+            child: Column(
+              children: [
+                Text("戻る"),
+                ElevatedButton(
+                    onPressed: () {
+                      print("foo");
+                      Navigator.pop(context);
+                    },
+                    child: Text("押す")),
+              ],
+            )));
   }
 }
