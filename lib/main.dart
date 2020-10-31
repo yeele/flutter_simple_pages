@@ -95,10 +95,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text("初期値として渡す"),
                 onPressed: () {
                   print("オッス！");
-                  Navigator.push(
+                  final result = Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => NicePage("foo")),
+                    MaterialPageRoute(builder: (context) => NicePage("瞑想")),
                   );
+                  print(result.then((dynamic t) => {print(t)}));
                 },
               )
             ],

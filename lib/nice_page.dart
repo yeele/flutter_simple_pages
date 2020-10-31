@@ -18,10 +18,10 @@ class NicePage extends StatelessWidget {
             width: double.infinity,
             child: Column(
               children: [
-                Text("Nice play, " + this.foo),
+                Text("Nice play, " + this.foo + "!"),
                 RaisedButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.pop(context, "ここで結果をかえせます");
                     },
                     child: Text("押して")),
               ],
