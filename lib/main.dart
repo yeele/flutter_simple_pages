@@ -79,6 +79,8 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Icon(Icons.accessible_forward),
+              Icon(Icons.park, size: 40),
               Image.asset("assets/images/owl-2.jpg"),
               // Image.network(
               //     'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
