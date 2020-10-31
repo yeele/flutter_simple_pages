@@ -27,13 +27,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class SampleArguments {
-  final String name;
-  final int age;
-
-  SampleArguments(this.name, this.age);
-}
-
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
@@ -85,7 +78,14 @@ class _MyHomePageState extends State<MyHomePage> {
               //   context,
               //   MaterialPageRoute(builder: (context) => SamplePage()),
               // );
-              Navigator.pushNamed(context, '/sample');
+              Navigator.pushNamed(
+                context,
+                '/sample',
+                arguments: SampleArguments(
+                  'Miso soup',
+                  23,
+                ),
+              );
             },
           ),
         ),
