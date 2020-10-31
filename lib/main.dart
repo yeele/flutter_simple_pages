@@ -71,38 +71,43 @@ class _MyHomePageState extends State<MyHomePage> {
           actions: [],
         ),
         body: Center(
-          child: Column(
-            children: [
-              RaisedButton(
-                child: Text("押っす"),
-                onPressed: () {
-                  print("オッス！");
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SamplePage()),
-                  // );
-                  Navigator.pushNamed(
-                    context,
-                    '/sample',
-                    arguments: SampleArguments(
-                      'Miso soup',
-                      23,
-                    ),
-                  );
-                },
-              ),
-              RaisedButton(
-                child: Text("初期値として渡す"),
-                onPressed: () {
-                  print("オッス！");
-                  final result = Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => NicePage("瞑想")),
-                  );
-                  print(result.then((dynamic t) => {print(t)}));
-                },
-              )
-            ],
+          child: Container(
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                RaisedButton(
+                  child: Text("押っす"),
+                  onPressed: () {
+                    print("オッス！");
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => SamplePage()),
+                    // );
+                    Navigator.pushNamed(
+                      context,
+                      '/sample',
+                      arguments: SampleArguments(
+                        'Miso soup',
+                        23,
+                      ),
+                    );
+                  },
+                ),
+                RaisedButton(
+                  child: Text("初期値として渡す"),
+                  onPressed: () {
+                    print("オッス！");
+                    final result = Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => NicePage("瞑想")),
+                    );
+                    print(result.then((dynamic t) => {print(t)}));
+                  },
+                )
+              ],
+            ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
