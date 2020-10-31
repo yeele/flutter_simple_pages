@@ -70,44 +70,45 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('これはAppBar.Textです'),
           actions: [],
         ),
-        body: Center(
-          child: Container(
-            width: double.infinity,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                RaisedButton(
-                  child: Text("押っす"),
-                  onPressed: () {
-                    print("オッス！");
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => SamplePage()),
-                    // );
-                    Navigator.pushNamed(
-                      context,
-                      '/sample',
-                      arguments: SampleArguments(
-                        'Miso soup',
-                        23,
-                      ),
-                    );
-                  },
-                ),
-                RaisedButton(
-                  child: Text("初期値として渡す"),
-                  onPressed: () {
-                    print("オッス！");
-                    final result = Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => NicePage("瞑想")),
-                    );
-                    print(result.then((dynamic t) => {print(t)}));
-                  },
-                )
-              ],
-            ),
+        body: Container(
+          color: Colors.amber,
+          width: double.infinity,
+          //padding: EdgeInsets.only(right: 8, left: 8),
+          margin: EdgeInsets.only(right: 8, left: 8),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              RaisedButton(
+                child: Text("押っす"),
+                onPressed: () {
+                  print("オッス！");
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => SamplePage()),
+                  // );
+                  Navigator.pushNamed(
+                    context,
+                    '/sample',
+                    arguments: SampleArguments(
+                      'Miso soup',
+                      23,
+                    ),
+                  );
+                },
+              ),
+              RaisedButton(
+                child: Text("初期値として渡す"),
+                onPressed: () {
+                  print("オッス！");
+                  final result = Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NicePage("瞑想")),
+                  );
+                  print(result.then((dynamic t) => {print(t)}));
+                },
+              )
+            ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
