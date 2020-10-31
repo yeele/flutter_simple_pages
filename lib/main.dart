@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/',
+      initialRoute: '/sample',
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => MyHomePage(title: 'Flutter Demo Home Page'),
@@ -25,6 +25,13 @@ class MyApp extends StatelessWidget {
       },
     );
   }
+}
+
+class SampleArguments {
+  final String name;
+  final int age;
+
+  SampleArguments(this.name, this.age);
 }
 
 class MyHomePage extends StatefulWidget {
