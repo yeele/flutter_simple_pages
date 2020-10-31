@@ -79,6 +79,8 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Image.network(
+                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
               RaisedButton(
                 child: Text("押っす"),
                 onPressed: () {
