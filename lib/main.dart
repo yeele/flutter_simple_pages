@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_very_simple/nice_page.dart';
 import 'package:flutter_very_simple/sample_page.dart';
 import 'dart:async';
 import 'package:intl/intl.dart';
@@ -70,23 +71,37 @@ class _MyHomePageState extends State<MyHomePage> {
           actions: [],
         ),
         body: Center(
-          child: RaisedButton(
-            child: Text("押っす"),
-            onPressed: () {
-              print("オッス！");
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => SamplePage()),
-              // );
-              Navigator.pushNamed(
-                context,
-                '/sample',
-                arguments: SampleArguments(
-                  'Miso soup',
-                  23,
-                ),
-              );
-            },
+          child: Column(
+            children: [
+              RaisedButton(
+                child: Text("押っす"),
+                onPressed: () {
+                  print("オッス！");
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => SamplePage()),
+                  // );
+                  Navigator.pushNamed(
+                    context,
+                    '/sample',
+                    arguments: SampleArguments(
+                      'Miso soup',
+                      23,
+                    ),
+                  );
+                },
+              ),
+              RaisedButton(
+                child: Text("初期値として渡す"),
+                onPressed: () {
+                  print("オッス！");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NicePage()),
+                  );
+                },
+              )
+            ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
