@@ -2,6 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NicePage extends StatelessWidget {
+  final String foo;
+
+  NicePage(this.foo);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +18,7 @@ class NicePage extends StatelessWidget {
             width: double.infinity,
             child: Column(
               children: [
-                Text("Nice play"),
+                Text("Nice play, " + this.foo),
                 RaisedButton(
                     onPressed: () {
                       Navigator.pop(context);

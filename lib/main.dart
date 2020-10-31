@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   print("オッス！");
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => NicePage()),
+                    MaterialPageRoute(builder: (context) => NicePage("foo")),
                   );
                 },
               )
